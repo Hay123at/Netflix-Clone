@@ -56,12 +56,21 @@ transition-timing-function: ease-in;
   .right-header-wapper {
     margin-left: 0;
   }
+   .header-wrapper{
+   justify-content:flex-start;
+  }
+  .left-header-wapper  {
+    margin-right: 33%;
+  }
+
 }
 
 @media (max-width: 850px) {
+ 
   .right-header-wapper div {
     width: 50%;
     justify-content: space-between;
+
   }
   .right-header-wapper .MuiSvgIcon-root {
     font-size: 30px;
