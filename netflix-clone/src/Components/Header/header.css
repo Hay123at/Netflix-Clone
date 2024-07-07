@@ -1,14 +1,18 @@
 .header-outer-container {
-  height: 10vh;
-  transition: all 0.5s;
+  position: fixed;
   top: 0;
-  position: sticky;
-background-color: rgb(20, 20, 20);
-background-color: transparent;
-color: white;
-transition-timing-function: ease-in;
+  width: 100%;
+  display: flex;
+  color: #fff;
+
+  background-color: transparent;
+  height: 10vh;
+  transition: background-color 1.6s ease;
   z-index: 1;
-  /* background-color: red; */
+}
+
+.header-outer-container.scrolled {
+  background-color: rgb(20, 20, 20);
 }
 
 .header-wrapper {
@@ -49,6 +53,7 @@ transition-timing-function: ease-in;
   display: flex;
   justify-content: space-between;
 }
+
 @media (max-width: 500px) {
   .left-header-wapper {
     width: 30%;
@@ -56,21 +61,18 @@ transition-timing-function: ease-in;
   .right-header-wapper {
     margin-left: 0;
   }
-   .header-wrapper{
-   justify-content:flex-start;
+  .header-wrapper {
+    justify-content: flex-start;
   }
-  .left-header-wapper  {
+  .left-header-wapper {
     margin-right: 33%;
   }
-
 }
 
-@media (max-width: 850px) {
- 
+@media (max-width: 769px) {
   .right-header-wapper div {
     width: 50%;
     justify-content: space-between;
-
   }
   .right-header-wapper .MuiSvgIcon-root {
     font-size: 30px;

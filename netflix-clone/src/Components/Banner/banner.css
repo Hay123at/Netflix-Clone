@@ -1,63 +1,72 @@
-.banner{
- 
-  height:90vh;
+.banner {
+  height: 90vh;
   object-fit: contain;
 }
-.banner_title{
- padding-top: 15%;
- padding-left: 5%;
- font-size: 2rem;
- color: #fff;
+.banner_title {
+  padding-top: 15%;
+  padding-left: 5%;
+  font-size: 2rem;
+  color: #fff;
 }
-.banner_button{
-   padding-left: 4%;
+.banner_button {
+  padding-left: 4%;
 }
-.playButton{
+.playButton {
   padding: 10px;
   width: 80px;
   margin: 15px;
   font-weight: bold;
   border: none;
 }
-.playButton:hover,.listButton:hover{
-    background-color: #c6c6c6;
-    cursor: pointer;
+.playButton:hover,
+.listButton:hover {
+  background-color: #c6c6c6;
+  cursor: pointer;
 }
-.listButton{
-    margin: 15px;
-      padding: 10px;
+.listButton {
+  margin: 15px;
+  padding: 10px;
   width: 80px;
-  background-color:rgba(0, 0, 0, 0.253);
+  background-color: rgba(0, 0, 0, 0.253);
   color: #fff;
-    font-weight: bold;
-     border: none;
+  font-weight: bold;
+  border: none;
 }
-.overview{
-  width: 500px;
+.overview {
+  width: 425px;
   margin-left: 5%;
   margin-top: 3%;
   color: #fff;
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 1.5vw;
+  line-height: 1.1;
 }
-.banner_fadeBottom{
+.banner_fadeBottom {
   height: 40vh;
-  background-image: linear-gradient(180deg,transparent,rgba(17,17,17,0.91),#111);
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(17, 17, 17, 0.91),
+    #111
+  );
 }
-
- 
-
-@media(max-width:425px){
-
-   .banner_title{
-    font-size: 20px;
+@media (max-width: 769px) {
+  .overview {
+    width: 350px;
+    font-size: 2vw;
   }
-  .overview{
-  /* font-size: 15px; */
-  width: 300px;
-  
+  .banner {
+    height: 80vh;
   }
-  .banner_button{
+}
+@media (max-width: 425px) {
+  .overview {
+    width: 300px;
+    font-size: 3.5vw;
+  }
+  .banner_title {
+    padding-top: 25%;
+  }
+  .banner_button {
     margin: 10% 0;
   }
 }

@@ -16,4 +16,5 @@
 }
 body{
   background-color: #111;
+  font-family: var(--font-base);
 }

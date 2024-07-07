@@ -5,13 +5,25 @@ import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { useState,useEffect } from 'react';
 
 
 
 
 const Header = () => {
+  const [isScrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  },[]);
   return (
-    <div className="header-outer-container">
+    <div className={`header-outer-container
+     ${isScrolled ? 'scrolled' : ''}`} data-scrolled={isScrolled ? 'true' : 'false'}>
       <div className="header-wrapper">
         <div className="left-header-wapper">
           <ul>
@@ -44,7 +56,6 @@ const Header = () => {
             </li>
           </ul>
         </div>
-       
       </div>
     </div>
   );
