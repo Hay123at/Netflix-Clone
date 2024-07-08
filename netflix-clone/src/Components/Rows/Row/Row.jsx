@@ -51,7 +51,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
    const _onStateChange = (event) => {
      if (event.data === window.YT.PlayerState.ENDED) {
-       setTrailerUrl(null); // Reset the trailerUrl state to close the video
+       setTrailerUrl(null);
       
      }
    };
